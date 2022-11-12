@@ -37,3 +37,25 @@ int NumberOfReqElementsOfArrayString(string[] arr)
     return len;
 }
 
+string[] SortElementsFromArrayString(string[] arr, int len)
+{
+    string[] array = new string[len];
+    int index = 0;
+    for (int i = 0; i < arr.Length; i++)
+    {
+        if (arr[i].Length <= 3)
+        {
+            array[index] = arr[i];
+            index++;
+        }
+    }
+    return array;
+}
+
+string[] ourArr = CreateArrayString();
+Console.WriteLine("Имеем массив из строк: ");
+PrintArray(ourArr);
+int sizeMy = NumberOfReqElementsOfArrayString(ourArr);
+string[] ourArray = SortElementsFromArrayString(ourArr, sizeMy);
+Console.WriteLine("Массив из строк, длина которых меньше либо равна 3 символа: ");
+PrintArray(ourArray);
