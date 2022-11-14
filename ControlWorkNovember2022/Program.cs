@@ -3,7 +3,6 @@
     Console.WriteLine("Введите длину массива: ");
     int size = Convert.ToInt32(Console.ReadLine());
     string[] array = new string[size];
-
     for (int i = 0; i < size; i++)
     {
         Console.WriteLine($"Введите строку для {i + 1}-го элемента массива: ");
@@ -26,7 +25,6 @@ void PrintArray(string[] array)
 int NumberOfReqElementsOfArrayString(string[] arr)
 {
     int len = default;
-    string[] array = new string[len];
     for (int i = 0; i < arr.Length; i++)
     {
         if (arr[i].Length <= 3)
